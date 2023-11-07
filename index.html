@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dictionary</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+  <h1>DICTIONARY AND THESAURUS</h1>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="wordoftheday.html">Word of the Day</a></li>
+        <li><a href="review.html">Review</a></li>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="slideshow-container">
+
+    <h5>click the picture to search dictionary.</h5>
+    <a href="search.html"><div class="mySlides fade">
+      <img src="Files/overthinking.jpg" alt="Image 1">
+    </div></a>
+
+    <a href="search.html"><div class="mySlides fade">
+      <img src="Files/coffee.jpg" alt="Image 2">
+    </div></a>
+
+    <a href="search.html"><div class="mySlides fade">
+      <img src="Files/mom.jpg" alt="Image 4">
+    </div></a>
+
+    <a href="search.html"><div class="mySlides fade">
+      <img src="Files/brain.jpg" alt="Image 5">
+    </div></a>
+  </div>
+
+  <script src="main.js"></script>
+  <script>
+    let slideIndex = 0;
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("mySlides");
+
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+
+      slideIndex++;
+
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds (adjust the duration as needed)
+    }
+
+    showSlides(); // Start the slideshow
+  </script>
+</body>
+</html>
